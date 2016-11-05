@@ -1,5 +1,8 @@
 package com.example.gps3;
 
+
+
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -48,7 +51,7 @@ btnGPSShowLocation.setOnClickListener(new View.OnClickListener() {
            txt1.setText(Double.toString(latitude));
            txt2.setText(Double.toString(longitude));
             Toast.makeText(
-                    getApplicationContext(),
+            				getApplicationContext(),
                     "Mobile Location (GPS): \nLatitude: " + latitude
                             + "\nLongitude: " + longitude,
                     Toast.LENGTH_LONG).show();
@@ -113,6 +116,14 @@ alertDialog.setNegativeButton("Cancel",
 
 alertDialog.show();
 }
+
+public void onClick(View arg0) {
+
+    Intent intent = new Intent(getBaseContext(), MainActivity2.class);
+                startActivity(intent);
+
+}
+
 
 
 //  @Override
